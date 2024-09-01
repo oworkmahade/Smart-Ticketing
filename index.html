@@ -48,6 +48,7 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        primaryColor: '#1dd100',
                     }
                 }
             }
@@ -60,12 +61,126 @@
     <!-- header section starts  -->
     <header>
         <!-- nav section starts  -->
+        <div id="nav-container" class="nav-container w-4/5 mx-auto mt-[30px]">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow font-raleway text-[18px] text-[#030712B3] font-medium">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a
+                        class="btn btn-ghost text-3xl md:text-4xl font-raleway font-extrabold text-[#030712]">E-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 font-raleway text-[18px] text-[#030712B3] font-medium">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end ">
+                    <a class="btn bg-[#e9fbe6] border border-[#98eb8a] flex flex-row items-center px-5">
+                        <h1 class="text-[#1DD100] font-raleway text:sm md:text-xl font-bold">Bus</h1>
+                        <div>
+                            <img src="./images/bus-icon.png" alt="" srcset="">
+                        </div>
+
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        </div>
         <!-- nav section ends  -->
 
         <!-- banner section starts  -->
+        <div id="banner-container" class="banner-container w-4/5 mx-auto  mt-[30px] relative">
+            <div class="hero min-h-[700px] rounded-3xl" style="background-image: url(./images/banner.png); ">
+                <div class="hero-overlay bg-opacity-10 rounded-3xl"></div>
+                <div class="hero-content text-neutral-content text-center">
+                    <div class="max-w-4xl">
+                        <h1 class="mb-5 text-2xl md:text-7xl font-bold text-white">End-to-End Travel with
+                            <span class="text-2xl md:text-7xl text-[#1DD100] font-bold">Hasan
+                                Paribahan</span>
+                        </h1>
+                        <p class="mb-5 font-inter text-sm md:text-[18px] ">
+                            Yes, you can run unit tests and view the results directly within the app. The integrated
+                            testing features allow for a streamlined .
+                        </p>
+                        <button id="buy-tickets"
+                            class="btn bg-[#1DD100] border-none font-raleway font-semibold md:font-bold text-black ">Buy
+                            Tickets</button>
+                    </div>
+                </div>
+            </div>
+            <!-- banner absolute section  -->
+            <div class="banner-absolute absolute w-full mt-8  md:-mt-16">
+                <div
+                    class="banner-absolute-container flex flex-col col-span-1 md:flex-row justify-center items-center gap-10 min-h-[140px]">
+                    <!-- registered user  -->
+                    <div id="registered-user"
+                        class="registered-user rounded-3xl px-8 py-8 border-b-2 border-[#1dd100] bg-white">
+                        <div class="register-user-container flex flex-row gap-4">
+                            <div class="register-user-icon">
+                                <img src="./images/people.png" alt="" srcset="">
+                            </div>
+                            <div class="register-user-content flex flex-col">
+                                <h1 class="font-inter text-4xl font-extrabold text-black"><span
+                                        id="register-user">500</span>K+</h1>
+                                <P class="font-inter text-sm font-normal text-[#03071299]">Registered users</P>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tickets sold  -->
+                    <div id="tickets-sold"
+                        class="tickets-sold rounded-3xl px-8 py-8 border-b-2 border-[#1dd100] bg-white">
+                        <div class="tickets-sold-container flex flex-row gap-4">
+                            <div class="tickets-sold-icon">
+                                <img src="./images/ticket-cupon.png" alt="" srcset="">
+                            </div>
+                            <div class="tickets-sold-content flex flex-col">
+                                <h1 class="font-inter text-4xl font-extrabold text-black"><span
+                                        id="tickets-sold">1.7</span> lacks
+                                </h1>
+                                <P class="font-inter text-sm font-normal text-[#03071299]">Tickets sold</P>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- rental partners  -->
+                    <div class="rental-partners rounded-3xl px-8 py-8 border-b-2 border-[#1dd100] bg-white">
+                        <div class="rental-partners-container flex flex-row gap-4">
+                            <div class="rental-partners-icon">
+                                <img src="./images/stoppage.png" alt="" srcset="">
+                            </div>
+                            <div class="rental-partners-content flex flex-col">
+                                <h1 class="font-inter text-4xl font-extrabold text-black"> <span
+                                        id="rental-partners">80</span>K+</h1>
+                                <P class="font-inter text-sm font-normal text-[#03071299]">Rental partners</P>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         <!-- banner section ends  -->
     </header>
     <!-- header section ends  -->
+
+
 
 
     <!-- main starts  -->
