@@ -192,9 +192,6 @@
     <main>
 
 
-
-
-
         <!-- best-offers section  -->
         <div class="best-offers-container mt-[550px] md:mt-72 w-4/5 mx-auto">
             <div class="best-offers-title">
@@ -253,11 +250,6 @@
                 type="button">See All
                 Offers</button>
         </div>
-
-
-
-
-
 
 
 
@@ -371,19 +363,9 @@
 
 
 
-
-
-
-
-
-
-
             <!-- select your seat section start  -->
             <div
                 class="seat border border-red-600 my-6 w-4/5 mx-auto min-h-48 rounded-3xl bg-[#ffffff] flex flex-col md:flex-row justify-between p-8 ">
-
-
-
 
 
                 <!-- select your seat left  -->
@@ -557,9 +539,6 @@
 
 
 
-
-
-
                 <!-- select your seat right  -->
                 <div class="seatright  md:w-2/6 min-h-32 border-l-2 border-dotted">
                     <div class="md:pl-8">
@@ -571,8 +550,7 @@
                     </div>
 
                     <!-- seat class price grand section -->
-                    <div
-                        class="seat-class-price-section p-2 md:p-8 border-2 border-red-600 mt-10 rounded-xl bg-[#f2f2f2] mx-8">
+                    <div class="seat-class-price-section p-2 md:p-8  mt-10 rounded-xl bg-[#f2f2f2] mx-8">
                         <!-- seat class price title container -->
                         <div
                             class="seat-class-price-container font-inter font-medium text-lg grid grid-flow-col col-span-3 justify-between border-b-2 border-dotted">
@@ -616,12 +594,20 @@
 
                         <!-- coupon section  -->
                         <div class="coupon-container mt-4">
-                            <div class="text-input-btn-container">
-                                <input type="text" placeholder="Have any coupon?"
-                                    class="input input-bordered w-full max-w-xs">
-                                <button class="btn btn-outline btn-success">Success</button>
-                                </input>
+                            <div class="input-container md:relative ">
+                                <input type="text" class="input-field rounded-lg p-4 w-full"
+                                    placeholder="Have any coupon?">
+
+                                <button
+                                    class="input-button rounded-lg bg-[#1dd100] px-3 py-2 font-inter text-sm  text-white md:absolute md:right-2.5 md:top-2.5 mt-2 md:mt-0">Apply</button>
+
                             </div>
+                        </div>
+                        <!-- Grand Total Section  -->
+                        <div
+                            class="grand-total-container flex flex-col md:flex-row justify-between font-inter text-lg font-bold mt-4">
+                            <div class="title">Grand Total</div>
+                            <div id="grand-total" class="grand-total">BDT <span id="total-amount-id">0</span></div>
                         </div>
 
 
@@ -631,6 +617,40 @@
 
 
                     </div>
+
+                    <!-- passengers details section  -->
+
+                    <div class="passengers-details p-8">
+                        <label class="form-control w-full max-w-xs">
+                            <!-- passengers name  -->
+                            <div class="label">
+                                <span class="label-text font-inter text-lg font-semibold">Passenger Name*</span>
+                            </div>
+                            <input type="text" placeholder="Enter your name"
+                                class="input input-bordered w-full max-w-xs" />
+                            <!-- phone number  -->
+                            <div class="label">
+                                <span class="label-text font-inter text-lg font-semibold">Passenger Name*</span>
+                            </div>
+                            <input type="text" placeholder="Enter your name"
+                                class="input input-bordered w-full max-w-xs" />
+                            <!-- email id  -->
+                            <div class="label">
+                                <span class="label-text font-inter text-lg font-semibold">Passenger Name*</span>
+                            </div>
+                            <input type="text" placeholder="Enter your name"
+                                class="input input-bordered w-full max-w-xs" />
+
+
+
+
+                        </label>
+
+                    </div>
+
+
+
+
 
 
                 </div>
