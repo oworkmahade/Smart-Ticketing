@@ -256,7 +256,8 @@
 
         <!-- paribahan section start   -->
         <!-- paribahan content section-->
-        <div class="paribahan-container mt-[120px] border-t-2 border-[#1DD100] rounded-t-[118px] bg-[#f7f8f8]">
+        <div
+            class=" paribahan-container mt-[120px] border-t-2  border-[#1DD100] rounded-t-[118px] bg-[#f7f8f8] pb-28  ">
             <div class="paribahan-title flex flex-col justify-center items-center mt-32">
                 <h1 class="text-2xl text-[40px] font-raleway text-black font-bold">Hasan Paribahan</h1>
                 <p class="text-lg text-[#03071299] w-2/3 text-center py-6">Yes, you can run unit tests and view the
@@ -365,7 +366,7 @@
 
             <!-- select your seat section start  -->
             <div
-                class="seat border border-red-600 my-6 w-4/5 mx-auto min-h-48 rounded-3xl bg-[#ffffff] flex flex-col md:flex-row justify-between p-8 ">
+                class="seat my-6 w-4/5 mx-auto min-h-48 rounded-3xl bg-[#ffffff] flex flex-col md:flex-row justify-between p-8">
 
 
                 <!-- select your seat left  -->
@@ -626,29 +627,43 @@
                             <div class="label">
                                 <span class="label-text font-inter text-lg font-semibold">Passenger Name*</span>
                             </div>
-                            <input type="text" placeholder="Enter your name"
-                                class="input input-bordered w-full max-w-xs" />
+                            <input id="name-id" type="text" placeholder="Enter your name"
+                                class="input input-bordered w-full max-w-xs mt-1" />
                             <!-- phone number  -->
                             <div class="label">
-                                <span class="label-text font-inter text-lg font-semibold mt-2">Phone Number*</span>
+                                <span class="label-text font-inter text-lg font-semibold mt-1">Phone Number*</span>
                             </div>
-                            <input type="text" placeholder="Enter your phone number"
-                                class="input input-bordered w-full max-w-xs" />
+                            <input id="phone-id" type="text" placeholder="Enter your phone number"
+                                class="input input-bordered w-full max-w-xs mt-1" />
                             <!-- email id  -->
                             <div class="label">
-                                <span class="label-text font-inter text-lg font-semibold mt-2">Email ID</span>
+                                <span class="label-text font-inter text-lg font-semibold mt-1">Email ID</span>
                             </div>
-                            <input type="text" placeholder="Enter your email id"
-                                class="input input-bordered w-full max-w-xs" />
+                            <input id="email-id" type="text" placeholder="Enter your email id"
+                                class="input input-bordered w-full max-w-xs mt-1" />
+
+                            <!-- next btn  -->
+                            <div class="mt-6">
+                                <button id="btn-next" class="btn w-full bg-[#1dd100] text-white">Next</button>
+                            </div>
+
+                            <div
+                                class="flex flex-col md:flex-row justify-between mt-4 underline font-inter  text-[#03071299]">
+                                <!-- terms & condition cancellation policy -->
+                                <a href="#" class="">
+                                    Terms and Conditions
+                                </a>
+
+                                <a href="#" class="">
+                                    Cancellation Policy
+                                </a>
+                            </div>
+
+
 
                         </label>
 
                     </div>
-
-
-
-
-
 
                 </div>
             </div>
@@ -657,16 +672,66 @@
         </div>
         <!-- paribahan section end   -->
 
-
-
-
-
     </main>
     <!-- main ends  -->
 
 
     <!-- footer section starts  -->
     <footer>
+        <div class="footer-section  bg-black">
+            <div class="footer-container md:w-4/5 mx-auto py-20">
+                <!-- p-ticket section  -->
+                <div class="p-ticket-container flex flex-col md:flex-row justify-between">
+                    <!-- left-content  -->
+                    <div class="content">
+                        <h1
+                            class="title font-raleway text-4xl font-extrabold text-[#FFFFFFCC] text-center md:text-left">
+                            P-Ticket</h1>
+                        <p
+                            class="md:w-2/3 font-inter text-sm text-[#FFFFFF4D] py-2 text-center md:text-left p-4 md:p-0 md:mt-4">
+                            P-Ticket
+                            is a
+                            digital platform
+                            to make your daily
+                            commuting better.</p>
+                    </div>
+                    <!-- right -app  -->
+                    <div class="app mt-4 md:mt-0">
+                        <h1 class="font-raleway text-[#FFFFFFCC] text-sm text-center md:text-left">Download our app</h1>
+                        <div class="app py-2 md:mt-2 flex flex-row justify-center">
+                            <img src="./images/Group 104.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- dotted-border  -->
+                <div class="dotted border border-dashed border-[#FFFFFF4D] mt-8"></div>
+
+                <!-- all-right-reserve  -->
+                <div class="all-right-reserve mt-8  flex flex-col md:flex-row justify-between">
+                    <!-- left-section  -->
+                    <div class="left">
+                        <p class="font-inter text-sm text-[#FFFFFF4D] text-center md:text-left">@all rights reserved,
+                            P-Ticket
+                            services
+                            limited.2024</p>
+                    </div>
+                    <!-- right section  -->
+                    <div
+                        class="right font-inter text-sm text-[#FFFFFFCC] grid grid-flow-row md:grid-flow-col col-span-1 md:col-span-3 md:gap-24 justify-center md:justify-between mt-4 md:mt-0">
+                        <div class="Terms-&-condition">
+                            <h1 class=" text-center">Terms & condition</h1>
+                        </div>
+                        <div class="Return-&-refund-policy">
+                            <h1 class="text-center">Return & refund policy</h1>
+                        </div>
+                        <div class="Privacy-policy text-center">
+                            <h1 class="">Privacy policy</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     <!-- footer section ends  -->
 
