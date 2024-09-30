@@ -5,6 +5,13 @@ function seatIncrement() {
   return count;
 }
 
+// seat decrement counter function
+function seatDecrement(btnCount) {
+  let totalSeat = 40;
+  seatLefBox = document.getElementById("seats-left");
+  seatLefBox.innerText = totalSeat - count;
+}
+
 // seat booked details function
 function seatBookedDetails(event) {
   // seat selection and background filled
@@ -64,8 +71,8 @@ function seatBookedDetails(event) {
 }
 
 // function coupon
-function coupon(count) {
-  if (count === 3) {
+function coupon(btnCount) {
+  if (btnCount === 3) {
     const applyBtn = document.getElementById("applyBtn");
     applyBtn.removeAttribute("disabled");
     applyBtn.classList.add("bg-green");

@@ -5,4 +5,5 @@ function seatBooked(event) {
   const btnCount = seatIncrement(count);
   seatBookedDetails(event);
   coupon(count);
+  seatDecrement(count);
 }
