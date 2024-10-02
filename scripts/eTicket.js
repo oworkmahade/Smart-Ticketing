@@ -8,5 +8,8 @@ function seatBooked(event) {
   coupon(noOfSeat);
   seatDecrement(noOfSeat);
   const totalSeatPrice = totalPrice(perSeatCost, noOfSeat);
-  console.log(noOfSeat);
+}
+
+function grandTotal() {
+  const grandTotal = grandTotalPrice();
 }

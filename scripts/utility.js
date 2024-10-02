@@ -18,24 +18,6 @@ function seatBookedDetails(event) {
   const seat = event.target;
   seat.classList.add("bg-green");
 
-  // const seats = document.querySelectorAll(".btn");
-
-  // for (const seat of seats) {
-  //   seat.addEventListener("click", function () {
-  //     seat.classList.add("bg-green");
-  //   });
-  // }
-
-  // seats.forEach((seat) => {
-  //   seat.addEventListener("click", function () {
-  //     seat.classList.add("bg-green");
-  //   });
-
-  //   seat.addEventListener("dblclick", function () {
-  //     seat.classList.remove("bg-green");
-  //   });
-  // });
-
   // dynamic seat allocation
   //  seat name catch
   const seatNumber = event.target.innerText;
@@ -87,5 +69,30 @@ function coupon(noOfSeat) {
 function totalPrice(perSeatCost, noOfSeat) {
   const total = noOfSeat * perSeatCost;
   document.getElementById("total-amount-id").innerText = total;
+  document.getElementById("grand-total").innerText = total;
   return total;
+}
+
+// grand total value calculation
+
+function grandTotalPrice() {
+  const couponValue = document.getElementById("couponText").value;
+  const value = couponValue.toLowerCase();
+
+  const total = document.getElementById("total-amount-id").innerText;
+  console.log(total);
+
+  if (value === "new15") {
+    const discount = (total * 15) / 100;
+    const grandTotal = total - discount;
+    document.getElementById("grand-total").innerText = grandTotal;
+    document.getElementById("couponText").value = "";
+  } else if (value === "couple20") {
+    const discount = (total * 20) / 100;
+    const grandTotal = total - discount;
+    document.getElementById("grand-total").innerText = grandTotal;
+    document.getElementById("couponText").value = "";
+  } else {
+    window.alert("Coupon not matched !");
+  }
 }
