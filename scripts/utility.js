@@ -71,8 +71,8 @@ function seatBookedDetails(event) {
 }
 
 // function coupon
-function coupon(btnCount) {
-  if (btnCount === 3) {
+function coupon(noOfSeat) {
+  if (noOfSeat === 3) {
     const applyBtn = document.getElementById("applyBtn");
     applyBtn.removeAttribute("disabled");
     applyBtn.classList.add("bg-green");
@@ -81,4 +81,11 @@ function coupon(btnCount) {
     const couponText = document.getElementById("couponText");
     couponText.removeAttribute("disabled");
   }
+}
+
+// total price function
+function totalPrice(perSeatCost, noOfSeat) {
+  const total = noOfSeat * perSeatCost;
+  document.getElementById("total-amount-id").innerText = total;
+  return total;
 }
