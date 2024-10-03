@@ -108,8 +108,8 @@ function grandTotalPrice() {
 function proceed(noOfSeat) {
   const phoneNumberTextBox = document.getElementById("phone-id");
   phoneNumberTextBox.addEventListener("keyup", function (event) {
-    const value = event.target.value;
-    if (value != null) {
+    const phoneNumber = event.target.value;
+    if (!isNaN(phoneNumber) && phoneNumber.trim() !== "") {
       document.getElementById("btn-next").removeAttribute("disabled");
     }
   });
