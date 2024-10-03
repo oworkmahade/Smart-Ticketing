@@ -5,6 +5,13 @@ function seatIncrement() {
   return count;
 }
 
+// seat boundary
+function seatBoundary(noOfSeat) {
+  if (noOfSeat > 4) {
+    window.alert("You are not allowed to  buy more than four (04) seat !");
+  }
+}
+
 // seat decrement counter function
 function seatDecrement(btnCount) {
   let totalSeat = 40;
@@ -54,7 +61,7 @@ function seatBookedDetails(event) {
 
 // function coupon
 function coupon(noOfSeat) {
-  if (noOfSeat === 3) {
+  if (noOfSeat === 4) {
     const applyBtn = document.getElementById("applyBtn");
     applyBtn.removeAttribute("disabled");
     applyBtn.classList.add("bg-green");
@@ -80,7 +87,6 @@ function grandTotalPrice() {
   const value = couponValue.toLowerCase();
 
   const total = document.getElementById("total-amount-id").innerText;
-  console.log(total);
 
   if (value === "new15") {
     const discount = (total * 15) / 100;
@@ -95,4 +101,16 @@ function grandTotalPrice() {
   } else {
     window.alert("Coupon not matched !");
   }
+}
+
+// proceed function
+
+function proceed(noOfSeat) {
+  const phoneNumberTextBox = document.getElementById("phone-id");
+  phoneNumberTextBox.addEventListener("keyup", function (event) {
+    const value = event.target.value;
+    if (value != null) {
+      document.getElementById("btn-next").removeAttribute("disabled");
+    }
+  });
 }
