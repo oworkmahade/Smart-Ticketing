@@ -1,52 +1,50 @@
 // seat increment counter function
 function seatIncrement() {
   count = count + 1;
-  document.getElementById("seat-booked").innerText = count;
-  return count;
-}
-
-// seat boundary
-function seatBoundary(noOfSeat) {
-  if (noOfSeat > 4) {
-    window.alert("You are not allowed to  buy more than four (04) seat !");
+  if (count <= 4) {
+    document.getElementById("seat-booked").innerText = count;
+    return count;
   }
 }
 
 // seat decrement counter function
-function seatDecrement(btnCount) {
-  let totalSeat = 40;
-  seatLefBox = document.getElementById("seats-left");
-  seatLefBox.innerText = totalSeat - count;
+function seatDecrement(noOfSeat) {
+  if (noOfSeat <= 4) {
+    let totalSeat = 40;
+    seatLefBox = document.getElementById("seats-left");
+    seatLefBox.innerText = totalSeat - noOfSeat;
+  }
 }
 
 // seat booked details function
-function seatBookedDetails(event) {
-  // seat selection and background filled
-  const seat = event.target;
-  seat.classList.add("bg-green");
+function seatBookedDetails(event, noOfSeat) {
+  if (noOfSeat <= 4) {
+    // seat selection and background filled
+    const seat = event.target;
+    seat.classList.add("bg-green");
 
-  // dynamic seat allocation
-  //  seat name catch
-  const seatNumber = event.target.innerText;
-  // container selection
-  const container = document.getElementById("seat-class-price-container-id");
-  // dynamic div creation
-  const dynDiv = document.createElement("div");
-  // div class addition
-  dynDiv.classList.add(
-    "seat-class-price",
-    "font-inter",
-    "font-medium",
-    "text-sm",
-    "grid",
-    "grid-flow-col",
-    "col-span-3",
-    "justify-between",
-    "text-[#03071299]",
-    "mt-4"
-  );
-  // div inner HTML set
-  dynDiv.innerHTML = `<div id="seat" class="seat pb-1">
+    // dynamic seat allocation
+    //  seat name catch
+    const seatNumber = event.target.innerText;
+    // container selection
+    const container = document.getElementById("seat-class-price-container-id");
+    // dynamic div creation
+    const dynDiv = document.createElement("div");
+    // div class addition
+    dynDiv.classList.add(
+      "seat-class-price",
+      "font-inter",
+      "font-medium",
+      "text-sm",
+      "grid",
+      "grid-flow-col",
+      "col-span-3",
+      "justify-between",
+      "text-[#03071299]",
+      "mt-4"
+    );
+    // div inner HTML set
+    dynDiv.innerHTML = `<div id="seat" class="seat pb-1">
                         <h1 id="seat-booked" class="">${seatNumber}</h1>
                         </div>
                         <div id="class" class="class pb-1 pl-5">
@@ -55,8 +53,11 @@ function seatBookedDetails(event) {
                         <div id="price" class="price pb-1 pl-5">
                         <h1 class="per-seat-price">550.00</h1>
                         </div>`;
-  // append the dynamic div to container
-  container.appendChild(dynDiv);
+    // append the dynamic div to container
+    container.appendChild(dynDiv);
+  } else {
+    window.alert("Maximum number of seat purchase exceeds !");
+  }
 }
 
 // function coupon
@@ -74,10 +75,12 @@ function coupon(noOfSeat) {
 
 // total price function
 function totalPrice(perSeatCost, noOfSeat) {
-  const total = noOfSeat * perSeatCost;
-  document.getElementById("total-amount-id").innerText = total;
-  document.getElementById("grand-total").innerText = total;
-  return total;
+  if (noOfSeat <= 4) {
+    const total = noOfSeat * perSeatCost;
+    document.getElementById("total-amount-id").innerText = total;
+    document.getElementById("grand-total").innerText = total;
+    return total;
+  }
 }
 
 // grand total value calculation
@@ -93,7 +96,8 @@ function grandTotalPrice() {
     const grandTotal = total - discount;
     document.getElementById("grand-total").innerText = grandTotal;
     const couponContainer = document.getElementById("coupon-container");
-    couponContainer.setAttribute("hidden", true);
+    // couponContainer.setAttribute("hidden", true);
+    couponContainer.classList.add("hidden");
     console.log(couponContainer);
   } else if (value === "couple20") {
     const discount = (total * 20) / 100;
@@ -101,6 +105,7 @@ function grandTotalPrice() {
     document.getElementById("grand-total").innerText = grandTotal;
     const couponContainer = document.getElementById("coupon-container");
     couponContainer.setAttribute("hidden", true);
+    // couponContainer.classList.add("hidden");
   } else {
     window.alert("Invalid coupon!");
   }

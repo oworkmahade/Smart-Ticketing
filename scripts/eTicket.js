@@ -4,11 +4,10 @@ let perSeatCost = 550.0;
 
 function seatBooked(event) {
   const noOfSeat = seatIncrement(count);
-  seatBoundary(noOfSeat);
-  seatBookedDetails(event);
+  seatBookedDetails(event, noOfSeat);
   coupon(noOfSeat);
   seatDecrement(noOfSeat);
-  const totalSeatPrice = totalPrice(perSeatCost, noOfSeat);
+  totalPrice(perSeatCost, noOfSeat);
   proceed(noOfSeat);
 }
 
