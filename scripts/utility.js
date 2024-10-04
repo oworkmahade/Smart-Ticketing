@@ -92,14 +92,17 @@ function grandTotalPrice() {
     const discount = (total * 15) / 100;
     const grandTotal = total - discount;
     document.getElementById("grand-total").innerText = grandTotal;
-    document.getElementById("couponText").value = "";
+    const couponContainer = document.getElementById("coupon-container");
+    couponContainer.setAttribute("hidden", true);
+    console.log(couponContainer);
   } else if (value === "couple20") {
     const discount = (total * 20) / 100;
     const grandTotal = total - discount;
     document.getElementById("grand-total").innerText = grandTotal;
-    document.getElementById("couponText").value = "";
+    const couponContainer = document.getElementById("coupon-container");
+    couponContainer.setAttribute("hidden", true);
   } else {
-    window.alert("Coupon not matched !");
+    window.alert("Invalid coupon!");
   }
 }
 
